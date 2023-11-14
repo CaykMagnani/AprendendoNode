@@ -1,8 +1,13 @@
 const express = require('express');
 const server = express();
 
-server.get('/curso', (req, res) => {
-    return res.json({ curso: 'node jS Com Express'});
+const cursos = ['DesenvolvimentoWEB', 'ProgramacaoDesktop', 'DesenvolvimentoMobile', 'InternetDasCoisas', 'Hardware', 'RedesEServidores'];
+
+server.get(()=>{});
+
+server.get('/curso/:index', (req, res) => {
+    const index = req.params;
+    return res.json(cursos[index]);
 });
 
-server.listen(8080);
+server.listen(3000);
