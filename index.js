@@ -1,12 +1,14 @@
 const express = require('express');
 const server = express();
 
-const cursos = ['DesenvolvimentoWEB', 'ProgramacaoDesktop', 'DesenvolvimentoMobile', 'InternetDasCoisas', 'Hardware', 'RedesEServidores'];
+const cursos = ['Desenvolvimento WEB', 'Programacao Desktop', 'Desenvolvimento Mobile', 'Internet Das Coisas', 'Hardware', 'Redes E Servidores'];
 
-server.get(()=>{});
+server.get('/curso', (req, res) => {
+    return res.json(cursos);
+});
 
 server.get('/curso/:index', (req, res) => {
-    const index = req.params;
+    const { index }= req.params;
     return res.json(cursos[index]);
 });
 

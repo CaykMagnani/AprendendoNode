@@ -1,7 +1,7 @@
 {
   "name": "projetonode",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm init -y\r npm install express --save\r yarn add nodemon -D\r yarn dev",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
